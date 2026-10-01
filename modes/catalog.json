@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "modes": [
+    {
+      "id": "advisory",
+      "commands": [
+        "advice"
+      ],
+      "kind": "primary",
+      "label": "고민 상담",
+      "path": "modes/advisory.md"
+    },
+    {
+      "id": "meeting",
+      "commands": [
+        "meeting"
+      ],
+      "kind": "primary",
+      "label": "아이디어 회의",
+      "path": "modes/meeting.md"
+    },
+    {
+      "id": "redteam",
+      "commands": [
+        "redteam"
+      ],
+      "kind": "primary",
+      "label": "아이디어 공격",
+      "path": "modes/redteam.md"
+    },
+    {
+      "id": "improve",
+      "commands": [
+        "improve"
+      ],
+      "kind": "primary",
+      "label": "아이디어 발전",
+      "path": "modes/improve.md"
+    },
+    {
+      "id": "decision",
+      "commands": [
+        "decision"
+      ],
+      "kind": "primary",
+      "label": "의사결정",
+      "path": "modes/decision.md"
+    },
+    {
+      "id": "mentor",
+      "commands": [
+        "comment",
+        "mentor"
+      ],
+      "kind": "primary",
+      "label": "멘토 코멘트",
+      "path": "modes/mentor.md"
+    },
+    {
+      "id": "reflection",
+      "commands": [
+        "reflection"
+      ],
+      "kind": "primary",
+      "label": "실제 회고",
+      "path": "modes/reflection.md"
+    },
+    {
+      "id": "future",
+      "commands": [
+        "future"
+      ],
+      "kind": "primary",
+      "label": "미래 시나리오",
+      "path": "modes/future.md"
+    },
+    {
+      "id": "invest",
+      "commands": [
+        "invest"
+      ],
+      "kind": "primary",
+      "label": "사업 심사",
+      "path": "modes/invest.md"
+    },
+    {
+      "id": "customer",
+      "commands": [
+        "customer"
+      ],
+      "kind": "primary",
+      "label": "고객 시뮬레이션",
+      "path": "modes/customer.md"
+    },
+    {
+      "id": "debate",
+      "commands": [
+        "debate"
+      ],
+      "kind": "primary",
+      "label": "주장 토론",
+      "path": "modes/debate.md"
+    },
+    {
+      "id": "single",
+      "commands": [
+        "ask"
+      ],
+      "kind": "primary",
+      "label": "한 명의 관점",
+      "path": "modes/single.md"
+    },
+    {
+      "id": "wildcard",
+      "commands": [
+        "wildcard"
+      ],
+      "kind": "modifier",
+      "label": "외부 분야 한 명",
+      "path": "modes/wildcard.md"
+    },
+    {
+      "id": "jury",
+      "commands": [
+        "jury"
+      ],
+      "kind": "primary",
+      "label": "공개 준비도",
+      "path": "modes/jury.md"
+    },
+    {
+      "id": "postmortem",
+      "commands": [
+        "postmortem"
+      ],
+      "kind": "primary",
+      "label": "가정 실패 회고",
+      "path": "modes/postmortem.md"
+    },
+    {
+      "id": "pivot",
+      "commands": [
+        "pivot"
+      ],
+      "kind": "primary",
+      "label": "사업 모델 세 개",
+      "path": "modes/pivot.md"
+    },
+    {
+      "id": "random",
+      "commands": [
+        "random"
+      ],
+      "kind": "modifier",
+      "label": "예상 밖의 구성",
+      "path": "references/panel-selection.md"
+    }
+  ]
+}

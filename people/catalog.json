@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "people": [
+    {
+      "id": "yoo-jae-suk",
+      "name": "유재석",
+      "country": "한국",
+      "domains": [
+        "entertainment",
+        "conversation"
+      ],
+      "roles": [
+        "CustomerAdvocate",
+        "Operator"
+      ],
+      "signature_question": "상대가 편하게 자기 이야기를 할 여지가 있는가?",
+      "path": "people/yoo-jae-suk.md",
+      "evidence_scope": "예능 대화 인용·수상 소감 보도 중심. 경청·진행의 세부 빈도는 추가 영상 분석 필요."
+    },
+    {
+      "id": "bong-joon-ho",
+      "name": "봉준호",
+      "country": "한국",
+      "domains": [
+        "cinema",
+        "storytelling"
+      ],
+      "roles": [
+        "ProductThinker",
+        "Contrarian"
+      ],
+      "signature_question": "추상적인 주장 대신 어떤 실제 장면을 보여줄 수 있는가?",
+      "path": "people/bong-joon-ho.md",
+      "evidence_scope": "2020 Walker 대담의 영어·통역 전사. 원래 한국어 말끝·속도는 평가 제외."
+    },
+    {
+      "id": "rm",
+      "name": "RM / 김남준",
+      "country": "한국",
+      "domains": [
+        "music",
+        "self-expression"
+      ],
+      "roles": [
+        "CustomerAdvocate",
+        "Ethicist"
+      ],
+      "signature_question": "이 선택은 사용자의 목소리를 더 드러내는가?",
+      "path": "people/rm.md",
+      "evidence_scope": "2018·2020 유엔 관련 발언·공식 캠페인 글. 사적인 성격으로 확대하지 않음."
+    },
+    {
+      "id": "son-heung-min",
+      "name": "손흥민",
+      "country": "한국",
+      "domains": [
+        "sports",
+        "teamwork"
+      ],
+      "roles": [
+        "Operator",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "개인 성과보다 팀의 다음 행동에 어떤 기여를 하는가?",
+      "path": "people/son-heung-min.md",
+      "evidence_scope": "2023 토트넘 주장 선임 발언·경기 후 공식 인터뷰의 영어 텍스트."
+    },
+    {
+      "id": "ichiro",
+      "name": "스즈키 이치로",
+      "country": "일본",
+      "domains": [
+        "sports",
+        "practice"
+      ],
+      "roles": [
+        "Operator",
+        "Contrarian"
+      ],
+      "signature_question": "큰 목표를 반복 가능한 준비로 어떻게 바꿀 것인가?",
+      "path": "people/ichiro.md",
+      "evidence_scope": "2025 명예의 전당 관련 대담·연설 전사. 준비된 영어 연설은 일상 일본어와 별개."
+    },
+    {
+      "id": "hayao-miyazaki",
+      "name": "미야자키 하야오",
+      "country": "일본",
+      "domains": [
+        "animation",
+        "observation"
+      ],
+      "roles": [
+        "ProductThinker",
+        "Contrarian"
+      ],
+      "signature_question": "실제 생활을 관찰했다면 이 장면은 무엇이 달라져야 하는가?",
+      "path": "people/hayao-miyazaki.md",
+      "evidence_scope": "2014 AWN 직접 인터뷰의 번역 텍스트. 작품 캐릭터를 본인의 성격으로 간주하지 않음."
+    },
+    {
+      "id": "jackie-chan",
+      "name": "성룡 / 재키 찬",
+      "country": "중국·홍콩",
+      "domains": [
+        "cinema",
+        "physical-production"
+      ],
+      "roles": [
+        "Operator",
+        "Visionary"
+      ],
+      "signature_question": "직접 작게 시도하면 무엇을 먼저 배울 수 있는가?",
+      "path": "people/jackie-chan.md",
+      "evidence_scope": "2016 명예 오스카 수상 발언 인용·Academy 대담 소개 중심. 강한 갈등 반응은 미확인."
+    },
+    {
+      "id": "jack-ma",
+      "name": "마윈 / 잭 마",
+      "country": "중국",
+      "domains": [
+        "business",
+        "education"
+      ],
+      "roles": [
+        "Visionary",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "기술 변화 속에서 사람의 어떤 능력을 남길 것인가?",
+      "path": "people/jack-ma.md",
+      "evidence_scope": "2015·2017·2018 WEF 공개 인터뷰·발언. 본인의 실패 회고는 자기보고로 취급."
+    },
+    {
+      "id": "steve-jobs",
+      "name": "스티브 잡스",
+      "country": "미국",
+      "domains": [
+        "technology",
+        "meaningful-work"
+      ],
+      "roles": [
+        "Visionary",
+        "ProductThinker"
+      ],
+      "signature_question": "여러 설명을 지우면 이 선택의 핵심 의미는 무엇인가?",
+      "path": "people/steve-jobs.md",
+      "evidence_scope": "2005 Stanford 졸업 연설 중심. 제품 발표·직장 내 태도까지 일반화하지 않음."
+    },
+    {
+      "id": "bill-gates",
+      "name": "빌 게이츠",
+      "country": "미국",
+      "domains": [
+        "technology",
+        "public-health-systems"
+      ],
+      "roles": [
+        "Operator",
+        "Visionary"
+      ],
+      "signature_question": "실패를 개인 탓으로 돌리기 전에 체계의 빈틈은 어디인가?",
+      "path": "people/bill-gates.md",
+      "evidence_scope": "2015·2022 Gates Notes의 직접 작성 글·TED 관련 설명."
+    },
+    {
+      "id": "elon-musk",
+      "name": "일론 머스크",
+      "country": "미국·남아공 출생",
+      "domains": [
+        "engineering",
+        "space"
+      ],
+      "roles": [
+        "Visionary",
+        "Contrarian"
+      ],
+      "signature_question": "이 요구사항은 정말 필요한가, 기본 제약은 무엇인가?",
+      "path": "people/elon-musk.md",
+      "evidence_scope": "2023·2024 Lex Fridman 기술 인터뷰와 2022 TED 소개. SNS·정치 발언은 별도 모드로 분석하지 않음."
+    },
+    {
+      "id": "warren-buffett",
+      "name": "워런 버핏",
+      "country": "미국",
+      "domains": [
+        "business",
+        "investment"
+      ],
+      "roles": [
+        "Investor",
+        "Contrarian"
+      ],
+      "signature_question": "이해하지 못하는 구조와 늦게 고치는 실수는 무엇인가?",
+      "path": "people/warren-buffett.md",
+      "evidence_scope": "2024 회계연도 주주서한과 2023 공개 주주총회 자료. 투자 권고를 만드는 목적이 아님."
+    },
+    {
+      "id": "oprah-winfrey",
+      "name": "오프라 윈프리",
+      "country": "미국",
+      "domains": [
+        "media",
+        "personal-growth"
+      ],
+      "roles": [
+        "CustomerAdvocate",
+        "Ethicist"
+      ],
+      "signature_question": "지금 느끼는 감정에서 어떤 다음 행동을 찾을 수 있는가?",
+      "path": "people/oprah-winfrey.md",
+      "evidence_scope": "2013 Harvard 졸업 연설 전사. 인터뷰 진행 기술 전체는 이 표본으로 확인 불가."
+    },
+    {
+      "id": "taylor-swift",
+      "name": "테일러 스위프트",
+      "country": "미국",
+      "domains": [
+        "music",
+        "storytelling"
+      ],
+      "roles": [
+        "ProductThinker",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "남길 것과 놓아줄 것을 어떤 경험으로 구별할 수 있는가?",
+      "path": "people/taylor-swift.md",
+      "evidence_scope": "2022 NYU 졸업 연설 전사. 가사·작품 속 화자의 성격은 분석하지 않음."
+    },
+    {
+      "id": "barack-obama",
+      "name": "버락 오바마",
+      "country": "미국",
+      "domains": [
+        "politics",
+        "public-deliberation"
+      ],
+      "roles": [
+        "Ethicist",
+        "Contrarian"
+      ],
+      "signature_question": "다른 입장도 함께 움직일 공통 이해는 무엇인가?",
+      "path": "people/barack-obama.md",
+      "evidence_scope": "2024 Democracy Forum 연설과 2016 공식 기자회견. 정책의 타당성·지지 여부 평가 제외."
+    },
+    {
+      "id": "donald-trump",
+      "name": "도널드 트럼프",
+      "country": "미국",
+      "domains": [
+        "politics",
+        "public-rhetoric"
+      ],
+      "roles": [
+        "Visionary",
+        "Contrarian"
+      ],
+      "signature_question": "복잡한 설명을 줄이면 어떤 핵심 주장으로 승부할 것인가?",
+      "path": "people/donald-trump.md",
+      "evidence_scope": "2024 TIME 직접 인터뷰와 2017 공동 기자회견. 주장 내용의 진위·정치적 평가와 말하기 기법을 구별."
+    },
+    {
+      "id": "david-attenborough",
+      "name": "데이비드 애튼버러",
+      "country": "영국",
+      "domains": [
+        "natural-history",
+        "science-communication"
+      ],
+      "roles": [
+        "Visionary",
+        "Ethicist"
+      ],
+      "signature_question": "이 작은 선택이 큰 시스템과 시간 흐름에 어떤 영향을 주는가?",
+      "path": "people/david-attenborough.md",
+      "evidence_scope": "2018 COP24·2021 COP26 연설 텍스트 중심. 실제 음성 속도·억양은 계측하지 않음."
+    },
+    {
+      "id": "jk-rowling",
+      "name": "J. K. 롤링",
+      "country": "영국",
+      "domains": [
+        "literature",
+        "imagination"
+      ],
+      "roles": [
+        "Ethicist",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "실패 뒤 남은 가치와 타인의 관점은 무엇인가?",
+      "path": "people/jk-rowling.md",
+      "evidence_scope": "2008 Harvard 연설에 한정. 이후 SNS 논쟁 방식은 이 프로필에 포함하지 않음."
+    },
+    {
+      "id": "shah-rukh-khan",
+      "name": "샤 루크 칸",
+      "country": "인도",
+      "domains": [
+        "cinema",
+        "storytelling"
+      ],
+      "roles": [
+        "Visionary",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "다른 접근을 하면서도 사람에게 줄 의미를 지킬 수 있는가?",
+      "path": "people/shah-rukh-khan.md",
+      "evidence_scope": "2012 Yale 연설 전사·2017 TED 전사. 준비 연설의 스타일로 한정."
+    },
+    {
+      "id": "narendra-modi",
+      "name": "나렌드라 모디",
+      "country": "인도",
+      "domains": [
+        "politics",
+        "public-dialogue"
+      ],
+      "roles": [
+        "Operator",
+        "Visionary"
+      ],
+      "signature_question": "현장의 경험과 반대 질문을 함께 확인했는가?",
+      "path": "people/narendra-modi.md",
+      "evidence_scope": "2025 Lex Fridman 인터뷰의 영어 번역 전사. 건강·역사·성과에 관한 자기주장은 검증 사실로 취급하지 않음."
+    },
+    {
+      "id": "trevor-noah",
+      "name": "트레버 노아",
+      "country": "남아프리카공화국",
+      "domains": [
+        "comedy",
+        "cultural-context"
+      ],
+      "roles": [
+        "Contrarian",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "같은 상황을 다른 문화·위치에서 보면 무엇이 바뀌는가?",
+      "path": "people/trevor-noah.md",
+      "evidence_scope": "2016·2022 NPR Fresh Air 인터뷰 전사. 방송 풍자와 인터뷰의 차이를 고려."
+    },
+    {
+      "id": "nelson-mandela",
+      "name": "넬슨 만델라",
+      "country": "남아프리카공화국",
+      "domains": [
+        "politics",
+        "reconciliation"
+      ],
+      "roles": [
+        "Ethicist",
+        "Visionary"
+      ],
+      "signature_question": "서로의 존엄을 지키면서 어떤 공동 과제를 세울 수 있는가?",
+      "path": "people/nelson-mandela.md",
+      "evidence_scope": "1994 대통령 취임 연설 공식 전사. 엄숙한 준비 연설이며 일상 성격·문답으로 일반화하지 않음."
+    },
+    {
+      "id": "jacinda-ardern",
+      "name": "저신다 아던",
+      "country": "뉴질랜드",
+      "domains": [
+        "politics",
+        "leadership"
+      ],
+      "roles": [
+        "Operator",
+        "Ethicist"
+      ],
+      "signature_question": "공감한 뒤 누가 어떤 책임과 다음 행동을 맡는가?",
+      "path": "people/jacinda-ardern.md",
+      "evidence_scope": "2022 Harvard 연설·2023 사임 발표 공식 문서. 위기 상황 전체나 실제 사생활로 일반화하지 않음."
+    },
+    {
+      "id": "lionel-messi",
+      "name": "리오넬 메시",
+      "country": "아르헨티나",
+      "domains": [
+        "sports",
+        "teamwork"
+      ],
+      "roles": [
+        "Operator",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "다음 실행에서 각자가 맡을 역할은 무엇인가?",
+      "path": "people/lionel-messi.md",
+      "evidence_scope": "FIFA가 공개한 2022 경기 후 발언·2023 회고. 짧은 발언 발췌·번역의 한계를 고려."
+    },
+    {
+      "id": "cristiano-ronaldo",
+      "name": "크리스티아누 호날두",
+      "country": "포르투갈",
+      "domains": [
+        "sports",
+        "performance"
+      ],
+      "roles": [
+        "Visionary",
+        "Operator"
+      ],
+      "signature_question": "목표에 대한 자신감을 어떤 준비로 뒷받침하는가?",
+      "path": "people/cristiano-ronaldo.md",
+      "evidence_scope": "UEFA 2013·2016 인터뷰. 다른 시기 SNS·논쟁적 인터뷰 전체로 일반화하지 않음."
+    },
+    {
+      "id": "usain-bolt",
+      "name": "우사인 볼트",
+      "country": "자메이카",
+      "domains": [
+        "sports",
+        "performance"
+      ],
+      "roles": [
+        "CustomerAdvocate",
+        "Visionary"
+      ],
+      "signature_question": "구체적인 강점을 인정하면서 어떤 발전을 기대할 수 있는가?",
+      "path": "people/usain-bolt.md",
+      "evidence_scope": "FIFA 2019 축구 관련 문답. 육상 훈련 철학·모든 무대의 태도로 확장하지 않음."
+    },
+    {
+      "id": "greta-thunberg",
+      "name": "그레타 툰베리",
+      "country": "스웨덴",
+      "domains": [
+        "climate-advocacy",
+        "public-rhetoric"
+      ],
+      "roles": [
+        "Contrarian",
+        "Ethicist"
+      ],
+      "signature_question": "말과 실제 행동 사이의 차이를 어떤 증거로 확인할 것인가?",
+      "path": "people/greta-thunberg.md",
+      "evidence_scope": "2019 UN 기후행동 정상회의 연설 전사. 해당 항의 연설의 스타일이며 진단·일상 성격은 분석하지 않음."
+    },
+    {
+      "id": "angela-merkel",
+      "name": "앙겔라 메르켈",
+      "country": "독일",
+      "domains": [
+        "politics",
+        "deliberation"
+      ],
+      "roles": [
+        "Operator",
+        "Contrarian"
+      ],
+      "signature_question": "즉답하기 전에 다른 관점과 결정 조건을 검토했는가?",
+      "path": "people/angela-merkel.md",
+      "evidence_scope": "2019 Harvard 졸업 연설 공식 영어 전사. 독일어 일상 말끝·실제 모든 의사결정으로 일반화하지 않음."
+    },
+    {
+      "id": "emmanuel-macron",
+      "name": "에마뉘엘 마크롱",
+      "country": "프랑스",
+      "domains": [
+        "politics",
+        "institutions"
+      ],
+      "roles": [
+        "Visionary",
+        "Operator"
+      ],
+      "signature_question": "핵심 개념을 정의하면 과제를 어떻게 나눌 수 있는가?",
+      "path": "people/emmanuel-macron.md",
+      "evidence_scope": "2018 유럽의회 연설·2017 공동 기자회견 공식 영어 전사. 정치적 주장의 타당성·성과는 평가하지 않음."
+    },
+    {
+      "id": "pope-francis",
+      "name": "프란치스코",
+      "country": "아르헨티나·바티칸 활동",
+      "domains": [
+        "religion",
+        "care"
+      ],
+      "roles": [
+        "Ethicist",
+        "CustomerAdvocate"
+      ],
+      "signature_question": "소외된 사람의 구체적인 필요를 어떤 작은 행동으로 도울 것인가?",
+      "path": "people/pope-francis.md",
+      "evidence_scope": "2017 TED 영상 메시지의 바티칸 공식 영어 번역. 역사적 공개 발언이며 현재 직책·종교적 권위를 주장하지 않음."
+    },
+    {
+      "id": "richard-feynman",
+      "name": "리처드 파인만",
+      "country": "미국",
+      "domains": [
+        "physics",
+        "scientific-method"
+      ],
+      "roles": [
+        "Contrarian",
+        "Operator"
+      ],
+      "signature_question": "이 설명이 틀렸음을 드러낼 관찰은 무엇이며 스스로 속이는 부분은 없는가?",
+      "path": "people/richard-feynman.md",
+      "evidence_scope": "1974 Caltech 졸업 연설 Cargo Cult Science. 과학적 정직성의 설명을 검토 프레임으로 응용."
+    },
+    {
+      "id": "jeff-bezos",
+      "name": "제프 베이조스",
+      "country": "미국",
+      "domains": [
+        "business",
+        "customers",
+        "distribution"
+      ],
+      "roles": [
+        "ProductThinker",
+        "Operator",
+        "Investor"
+      ],
+      "signature_question": "고객이 다시 선택하는 행동과 투자 효과를 실제로 어떻게 확인할 것인가?",
+      "path": "people/jeff-bezos.md",
+      "evidence_scope": "1997 Amazon 주주서한. 회사의 당시 판단 설명이며 현재 기업 문화·개인 성격 전체는 아님."
+    },
+    {
+      "id": "naval-ravikant",
+      "name": "나발 라비칸트",
+      "country": "미국·인도 출생",
+      "domains": [
+        "business",
+        "leverage",
+        "career"
+      ],
+      "roles": [
+        "Investor",
+        "Visionary",
+        "Contrarian"
+      ],
+      "signature_question": "나만의 축적된 지식과 책임을 어떤 반복 가능한 자산으로 만들 것인가?",
+      "path": "people/naval-ravikant.md",
+      "evidence_scope": "Naval 공식 How to Get Rich 전사. 부의 생성에 관한 본인의 프레임이며 검증된 보편 법칙은 아님."
+    }
+  ]
+}

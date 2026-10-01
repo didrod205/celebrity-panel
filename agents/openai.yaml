@@ -1,0 +1,4 @@
+interface:
+  display_name: "Celebrity Panel"
+  short_description: "공개 자료에서 영감받은 유명인 패널로 아이디어·결정을 검토합니다."
+  default_prompt: "$celebrity-panel /meeting /wildcard 내 아이디어를 여러 관점에서 검토해줘."

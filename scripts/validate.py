@@ -1,0 +1,93 @@
+"""Check skill references, extensible catalogs, and command composition invariants."""
+import json
+import re
+from pathlib import Path
+from commands import resolve
+
+ROOT = Path(__file__).resolve().parents[1]
+ROLES = {'Visionary','Operator','Investor','ProductThinker','Contrarian','CustomerAdvocate','Ethicist'}
+SECTIONS = ['확인한 공개 표현','공개적으로 확인 가능한 핵심 철학','사고 프레임','의사결정 기준','커뮤니케이션 특성','잘 맞는 질문','잘 맞지 않는 질문','피해야 할 과장','대표적인 관점','출처']
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def safe_path(rel):
+    target = (ROOT / rel).resolve()
+    require(ROOT in target.parents, f'Catalog path escapes skill: {rel}')
+    require(target.is_file(), f'Missing file: {rel}')
+    return target
+
+
+def validate():
+    skill = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
+    require(skill.startswith('---\nname: celebrity-panel\ndescription:'), 'Invalid entrypoint identity')
+    people = json.loads((ROOT / 'people/catalog.json').read_text(encoding='utf-8'))['people']
+    modes = json.loads((ROOT / 'modes/catalog.json').read_text(encoding='utf-8'))['modes']
+    require(len(people) >= 10, 'At least ten example people required')
+    require(len({p['id'] for p in people}) == len(people), 'Duplicate person IDs')
+    require(len({p['name'] for p in people}) == len(people), 'Duplicate person names')
+    for p in people:
+        require(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', p['id']), f'Invalid person ID: {p["id"]}')
+        require(p['domains'] and p['roles'] and p['signature_question'], f'Incomplete selection data: {p["id"]}')
+        require(set(p['roles']) <= ROLES, f'Unknown role: {p["id"]}')
+        body = safe_path(p['path']).read_text(encoding='utf-8')
+        require(all(section in body for section in SECTIONS), f'Incomplete profile: {p["id"]}')
+        require('https://' in body, f'Missing public source: {p["id"]}')
+    commands = [c for m in modes for c in m['commands']]
+    require(len(commands) == len(set(commands)), 'Ambiguous command alias')
+    require(len({m['id'] for m in modes}) == len(modes), 'Duplicate mode IDs')
+    for m in modes:
+        require(m['kind'] in {'primary','modifier'}, f'Invalid mode kind: {m["id"]}')
+        safe_path(m['path'])
+    require({m['id'] for m in modes if m['kind']=='modifier'} == {'wildcard','random'}, 'Incorrect modifier set')
+    registered_profiles = {safe_path(p['path']) for p in people}
+    actual_profiles = set((ROOT / 'people').glob('*.md')) - {ROOT / 'people/index.md'}
+    require(registered_profiles == actual_profiles, 'Unregistered or missing person profile')
+    registered_modes = {safe_path(m['path']) for m in modes if m['path'].startswith('modes/')}
+    require(registered_modes == set((ROOT / 'modes').glob('*.md')), 'Unregistered or missing mode')
+
+    # Local Markdown links must resolve even after moving the whole directory.
+    for file in ROOT.rglob('*.md'):
+        for link in re.findall(r'\]\(([^)]+)\)', file.read_text(encoding='utf-8')):
+            if link.startswith(('https://','http://','#')):
+                continue
+            target = (file.parent / link.split('#')[0]).resolve()
+            require(target.exists(), f'Broken link in {file.relative_to(ROOT)}: {link}')
+    return people, modes, commands
+
+
+def command_checks():
+    cases = [
+        ('$celebrity-panel /meeting /wildcard 블로그 사업', ['meeting'], ['wildcard'], False),
+        ('/celebrity-panel /postmortem /pivot /jury /wildcard 서비스', ['postmortem','pivot','jury'], ['wildcard'], False),
+        ('/random /wildcard /decision A와 B', ['decision'], ['random','wildcard'], False),
+        ('/comment 오늘 첫 버전 완성', ['mentor'], [], False),
+        ('/mentor 오늘 첫 버전 완성', ['mentor'], [], False),
+        ('/wildcard 사업 아이디어', [], ['wildcard'], False),
+        ('/ask /wildcard 미야자키만', ['single'], ['wildcard'], True),
+        ('/ask /meeting 잡스만', ['single','meeting'], [], True),
+        ('/jury /jury 자료', ['jury'], [], False),
+        ('문자열 `/pivot`을 설명해줘', [], [], False),
+        ('https://example.org/pivot', [], [], False),
+        ('/meeting /api/v1 엔드포인트', ['meeting'], [], False),
+    ]
+    for text, pipeline, modifiers, conflict in cases:
+        plan = resolve(text)
+        require(plan['pipeline']==pipeline and plan['modifiers']==modifiers and plan['needs_single_panel_clarification']==conflict, f'Unexpected plan: {text}')
+    require(resolve('/jury')['needs_problem_or_context'], 'Missing subject must be exposed')
+    try:
+        resolve('/unknown 대상')
+    except ValueError:
+        pass
+    else:
+        raise ValueError('Unknown commands must not silently choose a mode')
+    return len(cases)+2
+
+
+if __name__ == '__main__':
+    people, modes, commands = validate()
+    checks = command_checks()
+    print(json.dumps({'people':len(people),'mode_files':len(list((ROOT/'modes').glob('*.md'))),'commands':len(commands),'composition_checks':checks,'local_links':'passed'},ensure_ascii=False))
