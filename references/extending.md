@@ -3,7 +3,7 @@
 ## 인물 추가
 
 1. `templates/person-profile.md`를 `people/<id>.md`로 복사하고 실제 공개 자료로 채운다.
-2. 전문 분야·자료 범위와 확인한 원칙, 새 질문에 응용한 해석을 분리한다. 원어 습관은 근거가 있을 때만 추가한다.
+2. 전문 분야·자료 범위와 확인한 원칙, 새 질문에 응용한 해석을 분리한다. 원어 습관은 근거가 있을 때만 추가한다. `## 목소리`는 템플릿 형식대로 채우고, 확인된 짧은 공개 표현은 원문 페이지에서 문구를 직접 확인한 것만 넣는다.
 3. `people/catalog.json`에 `id`, `name`, `country`, `domains`, `roles`, `signature_question`, `path`, `evidence_scope`를 추가한다. 경로는 스킬 루트 기준 상대 경로다.
 4. `people/index.md`에 링크를 추가한다. signature_question은 이미 있는 질문과 다른 전제를 검토해야 한다.
 5. 구조 검증과 서로 다른 실제 입력을 시험한다. 유명인 이름을 지운 뒤에도 관점이 구별되는지 확인한다.
@@ -21,5 +21,7 @@
 ```bash
 python3 scripts/validate.py
 ```
+
+목소리 섹션 검사기의 단위 테스트는 `python3 -m unittest discover -s evals -p 'test_*.py'`로 실행한다.
 
 `references/evaluation.md`의 실제 프롬프트로 결과를 비교한다. 파일 검증 통과와 모델의 행동 검증은 별개다. 관찰한 실패에 맞춰 좁게 수정하고 새 사례를 추가한다. 설치 폴더가 복사본이면 원본 변경을 다시 복사하며, 심볼릭 링크면 원본 변경이 반영된다.
