@@ -51,6 +51,7 @@ def stats(text, root=ROOT):
     known = registered_quotes(root)
     return {
         'chars': len(text),
+        'visible_chars': len(re.sub(r'\]\((https?://[^)]+)\)', ']', text)),
         'turns': len(pairs),
         'speakers': speakers,
         'long_turns': [{'speaker': n, 'sentences': sentences(t)} for n, t in pairs if sentences(t) > 4],

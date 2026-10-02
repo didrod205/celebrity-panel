@@ -62,6 +62,9 @@ def voice_errors(body):
         for item in items:
             if not re.search(r'"[^"]+"', item) or '](https://' not in item:
                 errors.append(f'quote needs "text" and https source: {item[:30]}')
+            quoted = re.search(r'"([^"]+)"', item)
+            if quoted and len(quoted.group(1).split()) > 15:
+                errors.append(f'quote over 15 words: {item[:30]}')
     return errors
 
 

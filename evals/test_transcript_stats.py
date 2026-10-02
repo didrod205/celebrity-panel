@@ -82,6 +82,10 @@ class TranscriptStats(unittest.TestCase):
         self.assertEqual(result['cited_quotes'], ['Registered line.'])
         self.assertEqual(result['unregistered_quotes'], [])
 
+    def test_visible_chars_excludes_link_urls(self):
+        text = '[a](https://example.org/abc) 가'
+        self.assertEqual(stats(text, Path(self.tmp.name))['visible_chars'], len('[a] 가'))
+
     def test_blind_masks_latin_names_on_word_boundaries_and_keeps_reply_marker(self):
         text = '## 댓글\n\n**RM** CRM 얘기는 나중에요.\n\n↳ **유재석** RM 님 말 좋네요.\n'
         masked, key = blind(text)

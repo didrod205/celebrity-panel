@@ -55,6 +55,11 @@ class VoiceErrors(unittest.TestCase):
         body = GOOD.replace(ITEM, ITEM * 4)
         self.assertIn('quotes must be 없음 or 1-3 items', voice_errors(body))
 
+    def test_quote_over_fifteen_words_fails(self):
+        long_quote = ' '.join(f'w{i}' for i in range(16))
+        body = GOOD.replace('Example phrase here.', long_quote)
+        self.assertTrue(any('quote over 15 words' in e for e in voice_errors(body)))
+
     def test_reaction_keys_required(self):
         body = GOOD.replace(' / 모를 때 — 범위 밖이라고 말한다', '')
         self.assertIn('missing reaction: 모를 때', voice_errors(body))
