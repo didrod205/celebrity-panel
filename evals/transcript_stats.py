@@ -6,6 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TURN = re.compile(r'^(?:↳\s*)?\*\*([^*]+)\*\*\s+(.+)$')
+FOOTNOTE_QUOTE = re.compile(r'^\[\d+\][^"“\n]*["“]([^"”\n]+)["”]', re.M)
+LATIN_NAME = re.compile(r'[A-Za-z .]+')
 
 
 def section(text, title):
@@ -20,6 +22,7 @@ def transcript(text):
 def sentences(line):
     line = re.sub(r'\([^)]*\)', '', line)
     line = re.sub(r'\[\d+\]', '', line)
+    line = re.sub(r'(?:\.\.\.|…)+', ' ', line)
     parts = re.split(r'(?<=[.!?…])\s+', line.strip())
     return len([p for p in parts if re.search(r'[가-힣A-Za-z0-9]', p)])
 
@@ -28,10 +31,14 @@ def turns(text):
     return [(m.group(1).strip(), m.group(2)) for m in map(TURN.match, transcript(text).splitlines()) if m]
 
 
+def normalize(quote):
+    return quote.replace('’', "'").replace('‘', "'").strip()
+
+
 def registered_quotes(root):
     found = set()
     for profile in (root / 'people').glob('*.md'):
-        found.update(re.findall(r'^\s+- "([^"]+)"', profile.read_text(encoding='utf-8'), re.M))
+        found.update(normalize(q) for q in re.findall(r'^\s+- "([^"]+)"', profile.read_text(encoding='utf-8'), re.M))
     return found
 
 
@@ -40,7 +47,7 @@ def stats(text, root=ROOT):
     speakers = {}
     for name, _ in pairs:
         speakers[name] = speakers.get(name, 0) + 1
-    cited = re.findall(r'"([^"]+)"', section(text, '각주'))
+    cited = [normalize(m.group(1)) for m in FOOTNOTE_QUOTE.finditer(section(text, '각주'))]
     known = registered_quotes(root)
     return {
         'chars': len(text),
@@ -62,9 +69,13 @@ def blind(text):
         m = TURN.match(line)
         if m and m.group(1).strip() != '진행자':
             key.append(m.group(1).strip())
-            line = f'**화자 {len(key)}** {m.group(2)}'
+            prefix = '↳ ' if line.lstrip().startswith('↳') else ''
+            line = f'{prefix}**화자 {len(key)}** {m.group(2)}'
         for name in names:
-            line = line.replace(name, '○○')
+            if LATIN_NAME.fullmatch(name):
+                line = re.sub(rf'(?<![A-Za-z]){re.escape(name)}(?![A-Za-z])', '○○', line)
+            else:
+                line = line.replace(name, '○○')
         lines.append(line)
     return '\n'.join(lines).strip(), key
 

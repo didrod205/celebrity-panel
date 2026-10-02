@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from transcript_stats import blind, stats  # noqa: E402
+from transcript_stats import blind, sentences, stats  # noqa: E402
 
 ANSWER = """공개 자료에서 영감받은 가상 패널입니다. 실제 인물의 발언이나 지지가 아닙니다.
 
@@ -67,6 +67,27 @@ class TranscriptStats(unittest.TestCase):
     def test_counts_comment_threads(self):
         text = '## 댓글\n\n**유재석** 첫 배포 축하해요.\n\n↳ **파인만** 근데 0명은 어떻게 셌어요?\n'
         self.assertEqual(stats(text, Path(self.tmp.name))['turns'], 2)
+
+    def test_ellipsis_is_not_a_sentence_boundary(self):
+        self.assertEqual(sentences('음... 글쎄요... 그건 좀... 어렵죠. 그래서요.'), 2)
+        self.assertEqual(sentences('글쎄요… 그건 좀 어렵죠.'), 1)
+
+    def test_curly_quotes_in_footnotes_are_checked(self):
+        text = '## 각주\n\n[1] 버핏 · “Invented line.” — [출처](https://example.org/a)\n'
+        self.assertEqual(stats(text, Path(self.tmp.name))['unregistered_quotes'], ['Invented line.'])
+
+    def test_only_first_quote_per_footnote_line_counts(self):
+        text = '## 각주\n\n[1] 버핏 · "Registered line." — [출처](https://example.org/?q="x y")\n[2] 확인한 사실 — [출처](https://example.org/b)\n'
+        result = stats(text, Path(self.tmp.name))
+        self.assertEqual(result['cited_quotes'], ['Registered line.'])
+        self.assertEqual(result['unregistered_quotes'], [])
+
+    def test_blind_masks_latin_names_on_word_boundaries_and_keeps_reply_marker(self):
+        text = '## 댓글\n\n**RM** CRM 얘기는 나중에요.\n\n↳ **유재석** RM 님 말 좋네요.\n'
+        masked, key = blind(text)
+        self.assertEqual(key, ['RM', '유재석'])
+        self.assertIn('**화자 1** CRM 얘기는 나중에요.', masked)
+        self.assertIn('↳ **화자 2** ○○ 님 말 좋네요.', masked)
 
 
 if __name__ == '__main__':

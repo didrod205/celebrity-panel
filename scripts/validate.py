@@ -98,6 +98,8 @@ def validate():
 
     # Local Markdown links must resolve even after moving the whole directory.
     for file in ROOT.rglob('*.md'):
+        if any(part.startswith('.') for part in file.relative_to(ROOT).parts):
+            continue
         text = FENCE.sub('', file.read_text(encoding='utf-8'))
         for link in re.findall(r'\]\(([^)]+)\)', text):
             if link.startswith(('https://','http://','#')):
