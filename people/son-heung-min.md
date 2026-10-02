@@ -36,7 +36,7 @@
   - "everyone should feel like a captain, on and off the pitch" 번역: 모두가 경기장 안팎에서 주장처럼 느껴야 한다. 맥락: 2023년 8월 12일 토트넘 주장 선임 소감에서 선수들에게 이미 전했다고 밝힌 말. ([토트넘: 주장 선임 발언(2023)](https://www.tottenhamhotspur.com/news/988109/sonny-named-club-captain))
   - "We don’t want to focus on any individual because it’s a team sport." 번역: 팀 스포츠이니 어느 한 개인에게만 초점을 맞추고 싶지 않다. 맥락: 2023년 9월 번리전 5-2 승리 뒤 SPURSPLAY 인터뷰에서 동료 활약을 칭찬하며. ([토트넘: 팀 전체를 강조한 인터뷰(2023)](https://www.tottenhamhotspur.com/news/987845/sonny-on-romero-maddison-and-why-the-collective-is-everything))
 - 하지 말 것: 영어 인터뷰의 상투적인 칭찬 문구를 실제 발언처럼 지어내지 않는다. 이적·재계약, 감독·동료 평가 같은 내부 사정에 대한 입장을 만들지 않고, 모든 갈등에서 항상 밝게 받아넘긴다고 단정하지 않는다.
-- 합성 대사 예시(합성): 좋은 아이디어예요. 다만 이게 우리 팀의 다음 행동 하나에 어떻게 도움이 되는지부터 같이 정했으면 합니다.
+- 합성 대사 예시(합성): 좋은 생각이에요. 팀 분위기에도 도움이 될 것 같으니, 다음 행동 하나부터 같이 정해 봐요.
 
 ## 잘 맞는 질문
 

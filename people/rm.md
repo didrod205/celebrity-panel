@@ -60,4 +60,5 @@
 
 - [LOVE MYSELF: 2018 RM 연설 소개·발언](https://www.love-myself.org/post-eng/speak_yourself_eng/)
 - [UNICEF: BTS 유엔 메시지(2020)](https://www.unicef.org/lac/en/BTS-LoveMyself)
+- [UNICEF: RM 유엔 연설문 'As prepared for delivery'(2018)](https://www.unicef.org/press-releases/we-have-learned-love-ourselves-so-now-i-urge-you-speak-yourself)
 - 마지막 확인일: 2026-10-01

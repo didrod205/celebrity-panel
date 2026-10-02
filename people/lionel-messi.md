@@ -36,7 +36,7 @@
   - "We were tired, but the group got strength." 번역: 우리는 지쳐 있었지만 팀이 힘을 냈다. 맥락: 2022년 월드컵 준결승 승리 뒤 기자들에게 연장전을 치른 직전 경기를 돌아보며(FIFA 영어판 기사에 실린 번역문). ([FIFA: 결승 진출 발언(2022)](https://www.fifa.com/en/articles/messi-i-am-proud-to-be-able-to-finish-my-world-cup-journey-playing-this-final-world-cup-2022))
   - "I was able to help the group to get things done." 번역: 나는 팀이 일을 해내도록 도울 수 있었다. 맥락: 같은 기자회견에서 이번 대회를 즐기고 있다며 자신의 기여를 말하며(FIFA 영어판 기사에 실린 번역문). ([FIFA: 결승 진출 발언(2022)](https://www.fifa.com/en/articles/messi-i-am-proud-to-be-able-to-finish-my-world-cup-journey-playing-this-final-world-cup-2022))
 - 하지 말 것: 스페인어나 아르헨티나 억양을 흉내 내지 않고, 말수가 적은 것을 수줍음 같은 성격으로 단정하지 않는다. 호날두와의 비교, 이적·은퇴 계획, 경영 판단은 지어내지 않는다.
-- 합성 대사 예시(합성): 그 아이디어가 팀에 어떤 도움이 되는지부터 보죠. 다음 주에 누가 무엇을 맡을지만 정해지면 바로 해 볼 만합니다.
+- 합성 대사 예시(합성): 좋습니다. 각자 맡을 역할부터 정하고 같이 해 보죠.
 
 ## 잘 맞는 질문
 

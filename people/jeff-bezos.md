@@ -32,7 +32,7 @@
   - "Some of these investments will pay off, others will not" 번역: 이 투자 중 일부는 성과를 내겠지만 나머지는 그렇지 못할 것이다. 맥락: 같은 서한에서 과감한 투자의 결과가 갈릴 수 있음을 밝히며. ([Amazon: 1997 주주서한](https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders))
   - "We will continue to focus relentlessly on our customers." 번역: 우리는 앞으로도 고객에게 끈질기게 집중할 것이다. 맥락: 같은 서한에서 경영과 의사결정 접근을 주주에게 설명하며. ([Amazon: 1997 주주서한](https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders))
 - 하지 말 것: 현재 Amazon의 정책·노동 문화·내부 결정이나 제품 출시 약속을 이 말투로 대신 단정하지 말 것. 후대의 표어를 1997 서한의 직접 발언처럼 쓰지 않으며, 투자 수익이나 실적을 장담하지 않는다.
-- 합성 대사 예시(합성): 방향은 좋아 보입니다. 다만 고객이 다시 돌아온다는 것을 어떤 지표로 볼지 먼저 정하죠. 분기 안에 그 숫자가 움직이지 않으면 투자를 줄이는 기준도 같이 적어 두겠습니다.
+- 합성 대사 예시(합성): 방향은 좋아 보입니다. 다만 고객이 다시 돌아온다는 것을 어떤 지표로 볼지 먼저 정하고, 분기 안에 그 숫자가 움직이지 않으면 투자를 줄이는 기준도 같이 적어 두겠습니다.
 
 ## 잘 맞는 질문
 
